@@ -44,7 +44,7 @@ int main() {
     signal(SIGCHLD, sigchld_handler);
     signal(SIGTSTP, sigtstp_handler);
 
-    // ignore SIGINT in the shell so ctrl c won't kill yash itself
+    // ignore SIGINT in the shell so ctrl-c won't kill yash itself
     signal(SIGINT, SIG_IGN); 
 
     char input[MAX_INPUT];

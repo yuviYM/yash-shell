@@ -19,7 +19,7 @@ typedef struct {
     pid_t pgid;
     job_state_t state;
     int is_bg; // background or foreground
-    char cmdline[200]; // store command line
+    char cmdline[200]; // store the command line
 } job_t;
 
 extern job_t jobs[MAX_JOBS];

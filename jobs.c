@@ -100,38 +100,6 @@ int most_recent_job(void) {
     return max_index;
 }
 
-// void run_jobs(void) {
-//     // user runs 'jobs'
-//     int index_recent = most_recent_job();
-//     int recent_id = -1;
-//     if (index_recent >= 0) {
-//         recent_id = jobs[index_recent].job_id;
-//     }
-
-//     for (int i = 0; i < MAX_JOBS; i++) {
-//         if (!jobs[i].used) continue;    // skip free jobs
-
-//         char marker = (jobs[i].job_id == recent_id) ? '+' : '-';    // most recent job -> '+'
-
-//         if (jobs[i].state == DONE) {
-//             // when finished, print the firs time
-//             printf("[%d]%c  Done       %s", jobs[i].job_id, marker, jobs[i].cmdline);
-
-//             // next time 'jobs' is used, it is gone from the table
-//             remove_job(i); 
-            
-//         }
-//         else if (jobs[i].state == RUNNING) {
-//             printf("[%d]%c  Running    %s", jobs[i].job_id, marker, jobs[i].cmdline);
-//         }
-//         else if (jobs[i].state == STOPPED) {
-//             printf("[%d]%c  Stopped    %s", jobs[i].job_id, marker, jobs[i].cmdline);
-//         }
-
-        
-//     }
-// }
-
 void run_jobs(void) {
     // get used jobs into a list
     int used_list[MAX_JOBS];
